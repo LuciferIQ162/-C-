@@ -127,3 +127,184 @@ int main() {
     // %d, %lf, and %c are format specifiers for int, double, and char respectively.
     return 0;
 }
+Control Flow
+Control flow statements allow you to dictate the order in which code is executed.
+
+if-else Statement: Execute code based on a condition.
+
+C
+
+int score = 85;
+if (score >= 90) {
+    printf("Grade: A\n");
+} else if (score >= 80) {
+    printf("Grade: B\n");
+} else {
+    printf("Grade: C or lower\n");
+}
+for Loop: Repeat a block of code a specific number of times.
+
+C
+
+for (int i = 0; i < 5; i++) {
+    printf("Iteration %d\n", i);
+}
+while Loop: Repeat a block of code as long as a condition is true.
+
+C
+
+int countdown = 3;
+while (countdown > 0) {
+    printf("%d...\n", countdown);
+    countdown--;
+}
+printf("Liftoff!\n");
+Functions
+Functions are reusable blocks of code that perform a specific task. They help organize your code and make it more modular.
+
+C
+
+#include <stdio.h>
+
+// Function declaration (prototype)
+int add(int a, int b);
+
+// main function - the entry point of the program
+int main() {
+    int result = add(10, 20); // Function call
+    printf("The sum is: %d\n", result);
+    return 0;
+}
+
+// Function definition
+int add(int a, int b) {
+    return a + b; // Return the sum of a and b
+}
+Arrays and Strings
+Array: A collection of items of the same data type, stored in contiguous memory locations.
+
+String: In C, a string is simply an array of characters ending with a null character (\0).
+
+C
+
+#include <stdio.h>
+#include <string.h> // Required for string functions like strlen()
+
+int main() {
+    // An array of 5 integers
+    int numbers[5] = {10, 20, 30, 40, 50};
+    printf("The third element is: %d\n", numbers[2]); // Accessing element at index 2
+
+    // A string (an array of characters)
+    char greeting[] = "Hello";
+    printf("%s, C Language!\n", greeting);
+    printf("Length of greeting: %zu\n", strlen(greeting)); // strlen() calculates length
+
+    return 0;
+}
+Pointers
+A pointer is a variable that stores the memory address of another variable. This is C's most powerful (and often most confusing) feature. Pointers allow for direct memory manipulation, dynamic memory allocation, and efficient array handling.
+
+C
+
+#include <stdio.h>
+
+int main() {
+    int var = 42;
+    int *ptr; // Declare a pointer to an integer
+
+    ptr = &var; // Store the address of 'var' in the pointer 'ptr'
+
+    printf("Value of var: %d\n", var);
+    printf("Address of var: %p\n", &var);
+    printf("Value stored in ptr (address of var): %p\n", ptr);
+    printf("Value at the address ptr is pointing to: %d\n", *ptr); // Dereferencing the pointer
+
+    return 0;
+}
+Structures
+A struct (structure) allows you to group different data types together under a single name. It's a way to create your own custom data types.
+
+C
+
+#include <stdio.h>
+#include <string.h>
+
+// Define a new data type called 'Book'
+struct Book {
+    char title[100];
+    char author[50];
+    int year;
+};
+
+int main() {
+    struct Book book1; // Declare a variable of type Book
+
+    // Assign values to the members of book1
+    strcpy(book1.title, "The C Programming Language");
+    strcpy(book1.author, "Kernighan & Ritchie");
+    book1.year = 1978;
+
+    printf("Title: %s\nAuthor: %s\nYear: %d\n", book1.title, book1.author, book1.year);
+
+    return 0;
+}
+🚀 Project Ideas
+The best way to learn is by doing. Try building some of these projects to solidify your skills.
+
+Beginner
+Simple Calculator: A command-line calculator that can add, subtract, multiply, and divide.
+
+Number Guessing Game: The computer picks a random number, and the user has to guess it.
+
+Text File Analyzer: A program that reads a text file and counts the number of characters, words, and lines.
+
+Intermediate
+Contact Management System: A console application to add, view, search, and delete contacts stored in a file.
+
+Simple Snake Game: Create a classic snake game in the terminal using a library like ncurses.
+
+Custom ls Command: Implement your own version of the ls command in Linux/macOS.
+
+Advanced
+Build Your Own Shell: Create a simple command-line interpreter that can execute basic commands.
+
+HTTP Server: Write a basic web server that can serve static HTML files.
+
+Dynamic Memory Allocator: Implement your own versions of malloc() and free().
+
+🤝 Contributing
+Contributions are welcome! If you have a great C project, a useful tutorial, or a fix for an error, please feel free to contribute.
+
+Fork the repository.
+
+Create a new branch (git checkout -b feature/YourFeature).
+
+Commit your changes (git commit -m 'Add some amazing feature').
+
+Push to the branch (git push origin feature/YourFeature).
+
+Open a Pull Request.
+
+Please make sure your code is well-commented and follows the existing style.
+
+📚 Resources
+Books:
+
+"The C Programming Language" by Brian Kernighan and Dennis Ritchie (The "K&R" Bible)
+
+"C Programming: A Modern Approach" by K. N. King
+
+Online Tutorials:
+
+Learn-C.org - Interactive tutorials.
+
+GeeksforGeeks C Programming - Extensive articles and examples.
+
+Reference:
+
+cppreference.com - Detailed reference for the C standard library.
+
+<div align="center">
+<h3>Happy Coding!</h3>
+</div>
